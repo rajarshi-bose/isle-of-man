@@ -6,6 +6,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
 <meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap">
 <style>
 /* Layout: one-screen sim. Chart-room bar on top, island canvas fills the rest, survey panel docked right (stacks below on phones). Single dark theme by choice: a night ocean surround. */
@@ -29,7 +30,10 @@ h1{font-family:var(--display);font-weight:700;font-size:26px;margin:0;letter-spa
 h1 span{color:var(--fg);font-weight:500}
 /* Back to jarsh.us (top-left, in this page's colors) */
 @font-face{font-family:"Geist Pixel";src:url("fonts/GeistPixel-Square.woff2") format("woff2");font-display:swap}
-.jarsh-home{display:inline-flex;align-items:center;font-family:"Geist Pixel",ui-monospace,Menlo,monospace;font-size:15px;line-height:1;letter-spacing:.02em;color:var(--muted);text-decoration:none;white-space:nowrap;transition:color .15s}
+.jarsh-home{display:inline-flex;align-items:center;gap:8px;font:700 16px/1 "Schibsted Grotesk","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:-.01em;color:var(--fg);text-decoration:none;white-space:nowrap;transition:color .15s}
+.jarsh-home svg{width:14px;height:17px;flex:none;transition:transform .2s cubic-bezier(.19,1,.22,1)}
+.jarsh-home:hover svg,.jarsh-home:focus-visible svg{transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.jarsh-home,.jarsh-home svg{transition:none}}
 .jarsh-home:hover,.jarsh-home:focus-visible{color:var(--lantern)}
 header .jarsh-home{padding-right:14px;border-right:1px solid var(--line);align-self:stretch}
 .controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-left:auto}
@@ -168,7 +172,7 @@ h2{font-family:var(--display);font-weight:500;font-size:14px;margin:0 0 6px;lett
 
 <div class="app">
   <header>
-    <a class="jarsh-home" href="https://jarsh.us">&larr; jarsh.us</a>
+    <a class="jarsh-home" href="https://jarsh.us" aria-label="Back to jarsh.us"><svg viewBox="2 1 12 14" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><path d="M3 1H5V3H6V2H7V1H9V2H10V3H11V4H12V5H13V6H14V15H2V6H3Z"/></svg><span>jarsh.us</span></a>
     <h1>Pixel <span>Isle</span></h1>
     <div class="controls">
       <span class="lbl">Drop</span>
